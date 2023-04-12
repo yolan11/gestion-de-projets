@@ -2,7 +2,7 @@
     "name": "jeremy/php_mvc_setup",
     "autoload": {
         "psr-4": {
-            "Jeremy\\PhpMvcSetup\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
@@ -11,5 +11,7 @@
             "email": "jeremy@webilo.fr"
         }
     ],
-    "require": {}
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
 }
