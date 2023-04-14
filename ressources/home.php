@@ -9,5 +9,6 @@
 </head>
 <body>
 <h1>Accueil</h1>
+<p>Ceci est un <?= $test ?></p>
 </body>
 </html>
