@@ -32,6 +32,6 @@ class UserController
         $userModel = new User();
         $userModel->create();
 
-        header('locations: /users');
+        header('location: /users');
     }
 }

@@ -24,8 +24,7 @@ $router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::cla
 $router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
 
 // new user
-$router->map('GET', '/showUser', UserController::class . '#showUser');
-$router->map('GET', '/createNewUser', UserController::class . '#createNewUser');
+$router->map('GET', '/user/create', UserController::class . '#create');
 $router->map('POST', '/user/store', UserController::class . '#store');
 
 // map contact
