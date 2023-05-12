@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/main.css">
 <?php
 require "../vendor/autoload.php";
 
@@ -14,6 +15,13 @@ $router->map( 'GET', '/', function() {
 // map users
 $router->map('GET', '/users', UserController::class . '#index');
 $router->map('GET', '/user/[i:id]', UserController::class . '#show');
+
+// map projects
+$router->map('GET', '/projects', \App\Controllers\ProjectsController::class . '#read');
+$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
+$router->map('POST', '/projects/create', \App\Controllers\ProjectsController::class . '#create');
+$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
+$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
 
 // new user
 $router->map('GET', '/showUser', UserController::class . '#showUser');

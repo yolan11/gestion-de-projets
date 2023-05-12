@@ -1,0 +1,33 @@
+#projects-tab{
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#projects-tab thead tr{
+    font-size:1.2em;
+    font-weight: bold;
+    text-align: left;
+    color:#FFF;
+    background-color: #343334;
+}
+
+#projects-tab th, #projects-tab td{
+    padding: 12px 15px;
+}
+
+#projects-tab tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+#projects-tab tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#projects-tab tbody tr:last-of-type {
+    border-bottom: 2px solid #343334;
+}
