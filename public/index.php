@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/main.css">
 <?php
 require "../vendor/autoload.php";
 
