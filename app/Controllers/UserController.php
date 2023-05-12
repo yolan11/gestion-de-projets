@@ -21,4 +21,17 @@ class UserController
 
         require __DIR__ . '/../../ressources/users/user.php';
     }
+
+    public function create()
+    {
+        require __DIR__ . '/../../ressources/users/NewUser.php';
+    }
+
+    public function store()
+    {
+        $userModel = new User();
+        $userModel->create();
+
+        header('locations: /users');
+    }
 }

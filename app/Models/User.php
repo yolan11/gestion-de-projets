@@ -20,7 +20,7 @@ class User
     // Methods
     public function getAll()
     {
-        $query = $this->pdo->query('SELECT id, firstname, lastname, email, created_at, role_id FROM users');
+        $query = $this->pdo->query('SELECT idusers, surname, name, email FROM users');
         $users = $query->fetchAll();
 
         return $users;
@@ -28,9 +28,20 @@ class User
 
     public function getOne(int $id)
     {
-        $query = $this->pdo->prepare('SELECT id, firstname, lastname, email, created_at, role_id FROM users WHERE id = ?');
+        $query = $this->pdo->prepare('SELECT idusers, surname, name FROM users WHERE id = ?');
         $query->execute([$id]);
 
         return $query->fetch();
+    }
+
+    public function create()
+    {
+        // Traitement des données
+        $query = $this->pdo->prepare('INSERT INTO users (surname, name, email) VALUES (:surname, :name, :email);');
+        $query->execute([
+            'surname' => $_POST['surname'],
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+        ]);
     }
 }

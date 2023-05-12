@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>Utilisateurs</h1>
+<a href="/user/create">Créer un nouvel utilisateur</a>
 <table class="table">
     <thead>
     <tr>
@@ -16,17 +17,15 @@
         <th scope="col">Prénom</th>
         <th scope="col">Nom</th>
         <th scope="col">Email</th>
-        <th scope="col">Crée le</th>
     </tr>
     </thead>
     <tbody>
     <?php foreach ($users as $user) : ?>
         <tr>
-            <th scope="row"><?= $user['id'] ?></th>
-            <td><?= $user['firstname'] ?></td>
-            <td><?= $user['lastname'] ?></td>
+            <th scope="row"><?= $user['idusers'] ?></th>
+            <td><?= $user['surname'] ?></td>
+            <td><?= $user['name'] ?></td>
             <td><?= $user['email'] ?></td>
-            <td><?= $user['created_at'] ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>

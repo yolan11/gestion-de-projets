@@ -15,6 +15,11 @@ $router->map( 'GET', '/', function() {
 $router->map('GET', '/users', UserController::class . '#index');
 $router->map('GET', '/user/[i:id]', UserController::class . '#show');
 
+// new user
+$router->map('GET', '/showUser', UserController::class . '#showUser');
+$router->map('GET', '/createNewUser', UserController::class . '#createNewUser');
+$router->map('POST', '/user/store', UserController::class . '#store');
+
 // map contact
 $router->map( 'GET', '/contact', function() {
     require __DIR__ . '/../ressources/contact.php';
