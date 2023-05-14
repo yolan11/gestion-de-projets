@@ -8,7 +8,7 @@
     <title>Projects</title>
 </head>
 <body>
-
+<h1>Projets</h1>
     <div class="tab">
         <table id="projects-tab">
             <thead id="titles">
