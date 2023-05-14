@@ -10,7 +10,6 @@
 <body>
 <h1>Utilisateurs</h1>
 <a href="/user/create">Créer un nouvel utilisateur</a>
-
 <table id="projects-tab">
     <thead id="titles">
     <tr>

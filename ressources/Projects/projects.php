@@ -49,6 +49,5 @@
         <input type="text" name="team" id="team" required placeholder="Equipe">
         <button type="submit" id="create_project_form">Créer le projet</button>
     </form>
-
 </body>
 </html>
