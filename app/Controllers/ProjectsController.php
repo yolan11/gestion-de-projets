@@ -31,8 +31,10 @@ class ProjectsController{
 
     }
 
-    public function delete(){
-        $projectModel = new Project();
-        $projectModel->delete();
+    public function delete($id){
+        $projectModel = new Projects();
+        $projectModel->delete($id);
+
+        header("location: /projects");
     }
 }

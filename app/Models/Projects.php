@@ -50,8 +50,9 @@ class Projects{
 
     }
 
-    public function delete(){
-        $query = $this->pdo->
+    public function delete($id){
+        $query = $this->pdo->prepare("DELETE FROM projects WHERE idProjets = '$id'");
+        $query->execute();
     }
 
 }
