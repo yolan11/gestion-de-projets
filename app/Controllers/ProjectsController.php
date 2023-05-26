@@ -27,8 +27,11 @@ class ProjectsController{
         header("location: /projects");
     }
 
-    public function update(){
+    public function update($id){
+        $projectModel = new Projects();
+        $projectModel->update($id);
 
+        header('location: /projects');
     }
 
     public function delete($id){

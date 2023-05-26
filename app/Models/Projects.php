@@ -46,8 +46,9 @@ class Projects{
         ]);
     }
 
-    public function update(){
-
+    public function update($id){
+        $query = $this->pdo->prepare("UPDATE ");
+        $query->execute();
     }
 
     public function delete($id){

@@ -21,7 +21,7 @@ $router->map('GET', '/projects', \App\Controllers\ProjectsController::class . '#
 $router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
 $router->map('POST', '/projects/create', \App\Controllers\ProjectsController::class . '#create');
 $router->map('POST', '/projects/delete/[i:id]', \App\Controllers\ProjectsController::class . '#delete');
-$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#update');
+$router->map('POST  ', '/projects/update/[i:id]', \App\Controllers\ProjectsController::class . '#update');
 
 // new user
 $router->map('GET', '/user/create', UserController::class . '#create');
