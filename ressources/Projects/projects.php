@@ -30,15 +30,19 @@
                     <td>
                         <?php
                         $timeToString = strtotime($project['deadline']);
-                        $swap = date("d-m-Y", $timeToString);
+                        $swap = date("d/m/Y", $timeToString);
                         echo $swap;
                         ?>
                     </td>
                     <td><?= $project['team_id'] ?></td>
-                    <td><a class="details-inlist" href="/projects/details/id=<?php echo $project['idProjets']; ?>">Voir les détails</a></td>
-                    <td><a class="modify-inlist" href="/projects/modify/id=<?php echo $project['idProjets']; ?>">Modifer</a></td>
+                    <td><a class="details-inlist">Voir les détails</a></td>
                     <td>
-                        <form class="alignetoibatard" action="/projects/delete/<?= $project['idProjets']; ?>" method="POST">
+                        <form class="aligner" action="" method="POST">
+                            <button type="submit" class="modify-inlist" href="/projects/modify/id=<?php echo $project['idProjets']; ?>">Modifer</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form class="aligner" action="/projects/delete/<?= $project['idProjets']; ?>" method="POST">
                             <button class="delete-inlist" type="submit">Supprimer</button>
                         </form>
                     </td>
@@ -59,5 +63,8 @@
         <input type="text" name="team" id="team" required placeholder="Equipe">
         <button type="submit" id="create_project_form">Créer le projet</button>
     </form>
+
+
+
 </body>
 </html>
