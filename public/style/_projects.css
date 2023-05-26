@@ -8,6 +8,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+
 #projects-tab thead tr{
     font-size:1.2em;
     font-weight: bold;
@@ -50,14 +51,15 @@
 .delete-inlist{
     background-color: #dc3545;
     color:#FFF;
-    text-decoration: none;
     padding:8px 12px;
     border-radius:12px;
+    border:none;
 }
 
 .delete-inlist:hover{
     background-color: #C82333;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .details-inlist{
@@ -74,4 +76,8 @@
     text-decoration: none;
     padding:8px 12px;
     border-radius:12px;
+}
+
+.alignetoibatard{
+    display: contents;
 }
