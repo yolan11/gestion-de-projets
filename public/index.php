@@ -27,6 +27,9 @@ $router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::cla
 $router->map('GET', '/user/create', UserController::class . '#create');
 $router->map('POST', '/user/store', UserController::class . '#store');
 
+// delete user
+$router->map('GET', '/user/delete/', UserController::class . '#delete');
+
 // map contact
 $router->map( 'GET', '/contact', function() {
     require __DIR__ . '/../ressources/contact.php';

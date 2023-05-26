@@ -44,4 +44,12 @@ class User
             'email' => $_POST['email'],
         ]);
     }
+
+    public function delete(){
+        //Traitement des données
+        $query = $this->pdo->prepare('DELETE * FROM users WHERE idusers = :idusers;');
+        $query->execute([
+            'idusers' => $_POST['idusers']
+        ]);
+    }
 }

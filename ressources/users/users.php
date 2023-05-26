@@ -29,9 +29,9 @@
             <td><?= $user['surname'] ?></td>
             <td><?= $user['name'] ?></td>
             <td><?= $user['email'] ?></td>
-            <td><a class="details-inlist" href="projects/details/<?php echo $user['idusers']; ?>">Voir les détails</a></td>
-            <td><a class="modify-inlist" href="/projects/modify/<?php echo $user['idusers']; ?>">Modifer</a></td>
-            <td><a class="delete-inlist" href="/projects/delete/<?php echo $user['idusers']; ?>">Supprimer</a></td>
+            <td><a class="details-inlist" href="/user/details/ <?php echo $user['idusers']; ?>">Voir les détails</a></td>
+            <td><a class="modify-inlist" href="/user/modify/ <?php echo $user['idusers']; ?>">Modifer</a></td>
+            <td><a class="delete-inlist" href="/user/delete/ <?php echo $user['idusers']; ?>">Supprimer</a></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
