@@ -47,6 +47,7 @@
 .modify-inlist:hover{
     background-color: #0b5ed7;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .delete-inlist{
@@ -74,6 +75,7 @@
 .details-inlist:hover{
     background-color: #218838;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .aligner{
@@ -124,6 +126,8 @@
 }
 
 .popup {
+    display: flex;
+    flex-direction: column;
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -136,7 +140,6 @@
 .popup h2 {
     margin-top: 0;
     color: #333;
-    font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
     position: absolute;
@@ -149,7 +152,7 @@
     color: #333;
 }
 .popup .close:hover {
-    color: #06D85F;
+    color: #C82333;
 }
 .popup .content {
     max-height: 30%;
