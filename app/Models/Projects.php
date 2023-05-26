@@ -47,8 +47,13 @@ class Projects{
     }
 
     public function update($id){
-        $query = $this->pdo->prepare("UPDATE ");
-        $query->execute();
+        $query = $this->pdo->prepare("UPDATE projects SET name = :name, description = :description, deadline = :deadline, team_id = :team_id WHERE idProjets = '$id'");
+        $query->execute([
+            "name"=>$_POST['name'],
+            "description"=>$_POST['description'],
+            "deadline"=>$_POST['deadline'],
+            "team_id"=>$_POST['teamid']
+        ]);
     }
 
     public function delete($id){
