@@ -30,9 +30,9 @@
             <td><?= $user['name'] ?></td>
             <td><?= $user['email'] ?></td>
             <td><a class="details-inlist" href="/user/details/<?php echo $user['idusers']; ?>">Voir les détails</a></td>
-            <td><a class="modify-inlist" href="/user/modify/<?php echo $user['idusers']; ?>">Modifer</a></td>
+            <td><a class="modify-inlist" href="#popup1">Modifer</a></td>
             <td>
-                <form class="alignetoibatard" action="/user/delete/<?= $user['idusers']; ?>" method="POST">
+                <form class="aligner" action="/user/delete/<?= $user['idusers']; ?>" method="POST">
                     <button class="delete-inlist" type="submit">Supprimer</button>
                 </form>
             </td>
@@ -40,5 +40,18 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>Saisir les modifications</h2>
+        <a class="close" href="#">&times;</a>
+        <form action="/user/modify" method="post">
+            <input placeholder="Prénom" type="text" name="name" id="name" required>
+            <input placeholder="Nom" type="text" name="surname" id="surname" required>
+            <input placeholder="Email" type="email" name="email" id="email" required>
+            <button type="submit">Modifier l'utilisateur</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
