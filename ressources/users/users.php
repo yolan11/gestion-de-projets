@@ -32,7 +32,7 @@
             <td><a class="details-inlist" href="/user/details/<?php echo $user['idusers']; ?>">Voir les détails</a></td>
             <td><a class="modify-inlist" href="/user/modify/<?php echo $user['idusers']; ?>">Modifer</a></td>
             <td>
-                <form action="/user/delete/<?= $user['idusers']; ?>" method="POST">
+                <form class="alignetoibatard" action="/user/delete/<?= $user['idusers']; ?>" method="POST">
                     <button class="delete-inlist" type="submit">Supprimer</button>
                 </form>
             </td>
