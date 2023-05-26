@@ -51,7 +51,7 @@ class Projects{
     }
 
     public function delete(){
-
+        $query = $this->pdo->
     }
 
 }

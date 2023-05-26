@@ -32,6 +32,7 @@ class ProjectsController{
     }
 
     public function delete(){
-
+        $projectModel = new Project();
+        $projectModel->delete();
     }
 }

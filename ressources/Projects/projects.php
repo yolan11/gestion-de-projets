@@ -29,9 +29,9 @@
                     <td><?= $project['name'] ?></td>
                     <td><?= $project['deadline'] ?></td>
                     <td><?= $project['team_id'] ?></td>
-                    <td><a href="projects/details/<?php echo $project['idProjets']; ?>">Voir les détails</a></td>
-                    <td><a href="/projects/modify/<?php echo $project['idProjets']; ?>">Modifer</a></td>
-                    <td><a href="/projects/delete/<?php echo $project['idProjets']; ?>">Supprimer</a></td>
+                    <td><a class="details-inlist" href="projects/details/<?php echo $project['idProjets']; ?>">Voir les détails</a></td>
+                    <td><a class="modify-inlist" href="/projects/modify/<?php echo $project['idProjets']; ?>">Modifer</a></td>
+                    <td><a class="delete-inlist" href="/projects/delete/<?php echo $project['idProjets']; ?>">Supprimer</a></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

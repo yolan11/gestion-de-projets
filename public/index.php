@@ -20,8 +20,8 @@ $router->map('GET', '/user/[i:id]', UserController::class . '#show');
 $router->map('GET', '/projects', \App\Controllers\ProjectsController::class . '#read');
 $router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
 $router->map('POST', '/projects/create', \App\Controllers\ProjectsController::class . '#create');
-$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
-$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#readone');
+$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#delete');
+$router->map('GET', '/projects/[i:id]', \App\Controllers\ProjectsController::class . '#update');
 
 // new user
 $router->map('GET', '/user/create', UserController::class . '#create');
