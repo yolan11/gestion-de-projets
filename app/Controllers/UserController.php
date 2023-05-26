@@ -34,4 +34,11 @@ class UserController
 
         header('location: /users');
     }
+
+    public function delete($id){
+        $userModel= new User();
+        $userModel->delete($id);
+
+        header('location: /users');
+    }
 }

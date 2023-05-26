@@ -45,11 +45,9 @@ class User
         ]);
     }
 
-    public function delete(){
+    public function delete($id){
         //Traitement des données
-        $query = $this->pdo->prepare('DELETE * FROM users WHERE idusers = :idusers;');
-        $query->execute([
-            'idusers' => $_POST['idusers']
-        ]);
+        $query = $this->pdo->prepare("DELETE FROM users WHERE idusers = '$id'");
+        $query->execute();
     }
 }

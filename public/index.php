@@ -28,7 +28,7 @@ $router->map('GET', '/user/create', UserController::class . '#create');
 $router->map('POST', '/user/store', UserController::class . '#store');
 
 // delete user
-$router->map('GET', '/user/delete/', UserController::class . '#delete');
+$router->map('POST', '/user/delete/[i:id]', \App\Controllers\UserController::class . '#delete');
 
 // map contact
 $router->map( 'GET', '/contact', function() {
