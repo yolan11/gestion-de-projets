@@ -26,6 +26,8 @@ $router->map('POST  ', '/projects/update/[i:id]', \App\Controllers\ProjectsContr
 // new user
 $router->map('GET', '/user/create', UserController::class . '#create');
 $router->map('POST', '/user/store', UserController::class . '#store');
+$router->map('POST', '/user/update/[i:id]', UserController::class . '#update');
+
 
 // delete user
 $router->map('POST', '/user/delete/[i:id]', \App\Controllers\UserController::class . '#delete');

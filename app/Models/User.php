@@ -20,7 +20,7 @@ class User
     // Methods
     public function getAll()
     {
-        $query = $this->pdo->query('SELECT idusers, surname, name, email FROM users');
+        $query = $this->pdo->query('SELECT idusers, surname, name, email FROM users;');
         $users = $query->fetchAll();
 
         return $users;
@@ -28,7 +28,7 @@ class User
 
     public function getOne(int $id)
     {
-        $query = $this->pdo->prepare('SELECT idusers, surname, name FROM users WHERE id = ?');
+        $query = $this->pdo->prepare("SELECT idusers, surname, name FROM users WHERE id = '$id';");
         $query->execute([$id]);
 
         return $query->fetch();
@@ -47,7 +47,18 @@ class User
 
     public function delete($id){
         //Traitement des données
-        $query = $this->pdo->prepare("DELETE FROM users WHERE idusers = '$id'");
+        $query = $this->pdo->prepare("DELETE FROM users WHERE idusers = '$id';");
         $query->execute();
     }
+
+    public function update($id){
+        // Traitement des données
+        $query = $this->pdo->prepare("UPDATE users SET surname = :surname, name = :name, email = :email WHERE idusers = '$id'");
+        $query->execute([
+            'surname' => $_POST['surname'],
+            'name' => $_POST['name'],
+            'email' => $_POST['email']
+        ]);
+    }
+    
 }
