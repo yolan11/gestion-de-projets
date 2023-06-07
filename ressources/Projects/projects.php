@@ -36,17 +36,32 @@
                     </td>
                     <td><?= $project['team_id'] ?></td>
                     <td><a class="details-inlist">Voir les détails</a></td>
-                    <td>
-                        <form class="aligner" action="" method="POST">
-                            <button type="submit" class="modify-inlist" href="/projects/modify/id=<?php echo $project['idProjets']; ?>">Modifer</button>
-                        </form>
-                    </td>
+                    <td><a class="modify-inlist" href="#popup<?= $project['idProjets']; ?>">Modifer</a></td>
                     <td>
                         <form class="aligner" action="/projects/delete/<?= $project['idProjets']; ?>" method="POST">
                             <button class="delete-inlist" type="submit">Supprimer</button>
                         </form>
                     </td>
                 </tr>
+
+                    <div id="popup<?= $project['idProjets']; ?>" class="overlay">
+                        <div class="popup">
+                            <h2>Saisir les modifications</h2>
+                            <a class="close" href="#">&times;</a>
+                            <form class="popup-form" action="/projects/update/<?= $project['idProjets']; ?>" method="POST">
+                                <label for="name">Nom</label>
+                                <input placeholder="<?= $project['name']?>" type="text" name="name" id="name" value="<?= $project['name']?>" required>
+                                <label for="description">Description</label>
+                                <input placeholder="<?= $project['description']?>" type="text" name="description" id="description" value="<?= $project['description']?>" required>
+                                <label for="deadline">Deadline</label>
+                                <input placeholder="<?= $project['deadline']?>" type="date" name="deadline" id="deadline" value="<?= $project['deadline']?>" required>
+                                <label for="teamid">Team id</label>
+                                <input placeholder="<?= $project['team_id']?>" type="text" name="teamid" id="teamid" value="<?= $project['team_id']?>" required>
+                                <button type="submit">Modifier le projet</button>
+                            </form>
+                        </div>
+                    </div>
+
                 <?php endforeach; ?>
             </tbody>
         </table>
