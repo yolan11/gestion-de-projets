@@ -23,6 +23,9 @@ $router->map('POST', '/projects/create', \App\Controllers\ProjectsController::cl
 $router->map('POST', '/projects/delete/[i:id]', \App\Controllers\ProjectsController::class . '#delete');
 $router->map('POST  ', '/projects/update/[i:id]', \App\Controllers\ProjectsController::class . '#update');
 
+// map tasks
+$router->map('GET', '/tasks', \App\Controllers\TasksController::class . '#read');
+
 // new user
 $router->map('GET', '/user/create', UserController::class . '#create');
 $router->map('POST', '/user/store', UserController::class . '#store');
